@@ -1,3 +1,66 @@
 ﻿<h2>Hashes</h2>
 
-This page is a work in progress..
+<h3>Aanmaken en opvullen</h3>
+
+Een hash kan op enkele manieren opgevuld worden.
+
+<pre>my %hash;</pre>
+
+<pre>my %hash = (
+  naam => 'Jan',
+  leeftijd => 21,
+  stad => 'Gent'
+  );
+
+say "$hash{naam} is $hash{leeftijd} en komt uit $hash{stad}";</pre>
+
+Een nieuw paar toevoegen aan een bestaande hash:
+
+<pre>$hash{straat} = 'kerkstraat';</pre>
+
+Met een array als keys en een array als values:
+
+<pre>my @valueMap = (1,2,4,8);
+my @value = ('een', 'twee', 'vier', 'acht');
+
+my %map;
+@map{@valueMap} = @value;</pre>
+
+<h3>Paar verwijderen</h3>
+
+Een key/value paar kan verwijderd worden met <code>delete</code>.
+
+<pre>delete $hash{key}</pre>
+
+<h3>Slice</h3>
+
+Je kunt een slice nemen van enkele waarden en die in een array bewaren:
+
+<pre>my @adres = @hash{'straat', 'stad'};
+say join " ", @adres;</pre>
+
+<h3>Naar array omvormen</h3>
+
+Als je een hash in een array steekt krijg je een array met als inhoud <code>{ key1, value1, key2, value2, key3, value3 }</code>.
+
+<pre>my @array = %hash;</pre>
+
+<h3>Overlopen</h3>
+
+<h4>keys en values</h4>
+
+Een array met de keys of values kan opgevuld worden.
+
+<pre>my @keys = keys %hash;
+my @values = values %hash;
+
+say "keys: ", join ", ", @keys;
+say "values: ", join ", ", @values;</pre>
+
+<h4>Als key/value pair</h4>
+
+Met <code>each</code> kun je over alle paren lopen. Typisch gebruik je dat in een while-lus.
+
+<pre>while (my ($key, $value) = each %hash){
+  say "$key : $value";
+}</pre>
