@@ -1,0 +1,57 @@
+﻿<h2>Scalars</h2>
+
+<h3>Basics</h3>
+
+Aanmaken en uitprinten:
+
+<pre>my $first_name = 'Jan';
+my $last_name = 'Janssens';
+say "Hallo $first_name $last_name";</pre>
+
+Meerdere waarden tegelijk toekennen: merk op dat er rechts van het gelijkheidssteken eigenlijk een array staat!
+
+<pre>my ($name, $age, $city) = ('Jan', 21, 'Gent');
+say "$name ($age) uit $city";</pre>
+
+<h3>Concatenatie</h3>
+
+Strings kunnen samengevoegd worden door een <code>.</code>:
+
+<pre>my $name = $first_name . " " . $last_name;
+say "Hallo $name";</pre>
+
+<h3>Waarden wisselen</h3>
+
+Twee waarden kunnen heel simpel gewisseld worden:
+
+<pre>($first, $second) = ($second, $first);</pre>
+
+<h3>Printen</h3>
+
+Als je dubbele quotes wil printen zijn (o.a.) twee opties. Ofwel escape je ze met <code>\"</code>, ofwel plaats je de string tussen <code>qq{ }</code>.
+
+<pre>say "$name komt uit \"$city\".";
+say qq{$name komt uit "$city".};</pre>
+
+Onze favoriete functie <code>printf</code> bestaat ook in Perl.
+
+<h3>Rekenen</h3>
+
+Rekenen gaat zoals in elke deftige programmeertaal:
+
+<pre>say "5 + 4 = ", 5 + 4;
+say "5 - 4 = ", 5 - 4;
+say "5 * 4 = ", 5 * 4;
+say "5 / 4 = ", 5 / 4;
+say "5 % 4 = ", 5 % 4;</pre>
+
+Een macht nemen:
+
+<pre>say "5 ** 4 = ", 5 ** 4;</pre>
+
+Ook de gekende afkortingen zijn van de partij:
+
+<pre>$i++;
+++$i;
+$i--;
+--$i;</pre>

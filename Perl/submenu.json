@@ -10,6 +10,11 @@
     "sub": null
   },
   {
+    "text": "Scalars",
+    "url": "#Perl/Scalars",
+    "sub": null
+  },
+  {
     "text": "Arrays",
     "url": "#Perl/Arrays",
     "sub": null
@@ -22,6 +27,11 @@
   {
     "text": "Loops",
     "url": "#Perl/Loops",
+    "sub": null
+  },
+  {
+    "text": "Conditionals",
+    "url": "#Perl/Conditionals",
     "sub": null
   }
 ]
