@@ -1,0 +1,31 @@
+﻿<h2>Loops</h2>
+
+<h3>Arrays</h3>
+
+Er zijn enkele varianten van de for-lus:
+
+<h4>De foreach(achtige) lus</h4>
+
+<pre>for my $val (@array){
+	# doe iets met $val
+}</pre>
+
+<pre>foreach my $val (@array){
+	# doe iets met $val
+}</pre>
+
+<pre>for (@array){
+	# doe iets met $_
+}</pre>
+
+<h4>Volgens de indices</h4>
+
+<pre>for my $i (0..$#num){
+	say "$i = $num[$i]";
+}</pre>
+
+<h3>Hashes</h3>
+
+<pre>while (my ($key,$val) = each %hash) {
+	say "$key = $val";
+}</pre>

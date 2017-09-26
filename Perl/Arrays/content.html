@@ -1,0 +1,78 @@
+﻿<h2>Arrays</h2>
+
+<h3>Basics</h3>
+
+Aanmaken:
+
+<pre>my @array = ('nul', 'een', 'twee', 'drie');</pre>
+
+Waarde uitlezen:
+
+<pre>my $val = $array[2];</pre>
+
+Uitprinten (alles plakt aan elkaar), join maakt dat iets leesbaarder.
+
+<pre>say @array;</pre>
+
+De grootte en laatste index kunnen op volgende manier opgehaald worden:
+
+<pre>#grootte
+say scalar @array;
+
+#laatste index, handig om bv. over te loopen
+say $#array;</pre>
+
+<h3>Join</h3>
+
+Om de waarden uit te printen op een leesbare manier kun je join gebruiken. Volgend voorbeeld toont hoe je de waarden kunt splitsen door een komma, gevolgd door een spatie.
+
+<pre>say join ", ", @array;</pre>
+
+<h3>Range</h3>
+
+Perl heeft de mogelijkheid snel een range aan te maken als array.
+
+<pre>my @num = 1..5;
+my @let = 'a'..'e';</pre>
+
+<h3>Slice</h3>
+
+Je kunt heel eenvoudig een slice nemen van een array:
+
+<pre># 0 en 2
+my @slice = @array[0,2];
+say @slice;
+
+# 0 t.e.m. 2
+my @slice = @array[0..2];
+say @slice;</pre>
+
+<h3>Array naar scalairen</h3>
+
+<pre>my ($a, $b, $c) = @array[0..2];
+say "$a $b $c";</pre>
+
+<h3>Toevoegen en afhalen</h3>
+
+Toevoegen (zowel vooraan als achteraan) geeft telkens de lengte van de array terug.
+
+Als stapel achteraan:
+
+<pre>pop @array;
+push @array, 'some value';</pre>
+
+Als stapel vooraan:
+
+<pre>shift @array;
+unshift @array, 'some value';</pre>
+
+<h3>Splice</h3>
+
+Splice zou je kunnen zien als het omgekeerde van slice. Je verwijdert nu de aangegeven range.
+
+<pre># Verwijder 3 elementen vanaf index 2 (dus 2, 3 en 4)
+splice @array, 2, 3;</pre>
+
+<h3>Extra</h3>
+
+Bekijk ook zeker eens split, reverse, sort, (reverse sort,) grep en map.
